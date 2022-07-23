@@ -1,0 +1,16 @@
+
+/*estilos para o cabeçalho*/
+.header{
+    
+    background: var(--gray-800); /*fundo do cabeçalho */
+    display: flex; /*Facilita o arranjo horizontal e vertical*/
+    justify-content: center; /*Alinha no eixo x os elementos ao centro*/
+    align-items: center; /*Alinha no eixo y*/
+    padding: 1.25rem 0; /*espaço interno em cima e embaixo de 20px e zero nas laterais*/
+    gap: 0.5rem; /*espaço entre a logo e o texto de 8px*/
+}
+
+/*estilos para a logo do cabeçalho*/
+.header img{
+    height: 2rem;
+}

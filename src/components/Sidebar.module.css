@@ -1,0 +1,71 @@
+
+/**/
+.sidebar{
+    background: var(--gray-800); /*Essa cor vem do global.css que está importado no arquivo App.jsx*/
+    border-radius: 8px; /*Arredonda os cantos do bloco*/
+    overflow: hidden; /*mantém todos os elementos dentro do container */
+}
+
+/*classe para dar estilo a capa da sidebar*/
+.profileCover{
+    width: 100%; /*ocupa a largura de 100% do container em que está*/
+    height: 72px; /*altura de 72px*/
+    object-fit: cover; /*Não deixa a imagem da capa distorcer (esticar)*/
+}
+
+/*estilo da div profile que contém imagem do perfil, nome e profissão*/
+.profile{
+    display: flex; /*Facilita o arranjo horizontal e vertical*/
+    flex-direction: column; /*deixa todos os item do bloco um abaixo do outro*/
+    align-items: center; /*alinha no eixo y os elementos ao centro*/
+
+    margin-top: calc(0px - 1.5rem - 6px); /*põe uma margem negativa no container perfil(fazendo a imagem do usuário ficar por cima da capa*/
+}
+
+/*novo do usuário*/
+.profile strong{
+    margin-top: 1rem; /*adiciona 1rem(16px) de margem ao topo*/
+    color: var(--gray-100); /*cor do texto*/
+    line-height: 1.6; /*Altura da linha do texto*/
+}
+
+/*cargo do usuário*/
+.profile span{
+    font-size: 0.875rem; /*tamanho da fonte de 14px*/
+    color: var(--green-400);
+    line-height: 1.6;
+}
+
+
+
+
+/*estilo para o footer da sidebar, que contém o botão(ancora<a>) para editar o perfil*/
+.sidebar footer{
+    border-top: 1px solid var(--gray-600);/*adiciona uma borda somente no topo do footer*/
+    margin-top: 1.5rem; /*adiciona uma margem ao topo do footer*/
+    padding: 1.5rem 2rem 2rem; /*adiciona um padding no topo de 1.5rem, nas laterais de 2rem, e embaixo de 2rem */
+}
+
+.sidebar footer a{
+    /*width: 100%; ocupa 100% do container footer (não precisa se tiver display block*/
+    background: transparent; /*fundo trasparente*/
+    color: var(--green-500); /*cor da conte conforma a corda da varialvel em global.css*/
+    border: 1px solid var(--green-500); /*borda de 1px*/
+    border-radius: 8px; /*para deixar os cantos arredondados*/
+    height: 50px; /*altura de 50px*/
+    padding: 0 1.5rem; /*padding de 0 no topo e embaixo, e 1.5 nas laterais*/
+    font-weight: bold; /*espessura da fonte*/
+    display: block; /*nao permite outros elementos ao lado(ocupa horizontalmente todo o container(footer)*/
+    text-decoration: none; /*tira a decoração padrão da tag <a>*/
+    display: flex;
+    align-items: center;/*alinha ao centro no eixo y */
+    justify-content: center; /*alinha ao centro no eixo x*/
+
+    gap: 0.5rem;/*espaço entre o icone e o texto*/
+    transition: color 0.1s, background-color 0.1s; /*Transição na cor e no fundo do botão*/
+}
+
+.sidebar footer a:hover{
+    background: var(--green-500);
+    color: var(--white);
+}

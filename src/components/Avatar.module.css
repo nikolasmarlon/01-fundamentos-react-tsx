@@ -1,0 +1,18 @@
+/*Estilos para imagem do usuário*/
+.avatar {
+    
+    width: 3rem; /*largura mais a soma das bordas dos 4 lados*/
+    height: 3rem; /*altura mais a soma das bordas dos 4 lados*/
+    border-radius: 8px; /*cantos arredondado*/
+}
+
+
+.avatarWithBorder {
+   
+    width: calc(3rem + 12px); /*largura mais a soma das bordas dos 4 lados*/
+    height: calc(3rem + 12px);/*altura mais a soma das bordas dos 4 lados*/
+    border-radius: 8px;/*cantos arredondado*/
+    border: 4px solid var(--gray-800); /*borda do avatar (imagem do usuário)*/
+    outline: 2px solid var(--green-500); /*contorno ao redor da borda*/
+
+}

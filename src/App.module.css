@@ -1,0 +1,22 @@
+
+/*Classe para div principal, que vai embrulhar todo o conteúdo lateral e o proncipal*/
+.wrapper{
+    /**/
+    max-width: 70rem; /* 70 * 16 = 1120px */
+    margin: 2rem auto; /* margim de 2rem em cima e embaixo e auto nas laterais para ficar centralizado */
+    padding: 0 1rem; /* padding de 1rem(16px) nas laterais para conteúdo nao ficar colado nas laterais em telas menores*/
+
+    display: grid; /*layout baseado em grid, com linhas e colunas, facilitando o design de páginas web sem a necessidade de usar floats e posicionamento.*/
+    grid-template-columns: 256px 1fr; /*primeira coluna com largura fixa, o segundo vai se adaptar para caber no restante da tela (fr - flexível )*/
+    gap: 2rem; /*espaçamento entre as colunas de 32px */
+    align-items: flex-start; /*alinha a sidebar e o main ao topo*/
+}
+
+@media (max-width: 768px) {
+    html{
+        font-size: 87.5%;
+    }
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}

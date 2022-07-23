@@ -1,0 +1,154 @@
+/*Estilos para o cabeçalho do post que tem dois filhos ( div.author e time )*/
+.post > header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post > header time{
+    font-size: 0.875rem;
+    color: var(--gray-400);
+}
+
+/*Estilos para a div author que esta dentor do pai header, e tem dois filhos (img.avatar e div.avatarInfo*/
+.author{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+/*div.authorInfor tem dois filhos (strong e span) */
+.authorInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.authorInfo strong{
+    color: var(--gray-100);
+    line-height: 1.6;
+}
+
+.authorInfo span{
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+/*Fim Estilos para o cabeçalho do posto*/
+/**/
+
+.post{
+    background-color: var(--gray-800);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+
+/*(+) vai estilizar todo posto que contém um post antes dele (poderia também ser usado gap*/
+.post + .post{
+    margin-top: 2rem;
+}
+
+
+.content{
+    line-height: 1.6;
+    color: var(--gray-300);
+    margin-top: 1.5rem;
+}
+
+.content p{
+    margin-top: 1rem;
+}
+
+.content a{
+    font-weight: bold;
+    color: var(--green-500);
+    text-decoration: none;
+}
+
+.content a:hover{
+    color: var(--green-300);
+}
+/*Estilos para as hashtags(adiciona espaço entre os links*/
+.hashtags{
+    display: flex;
+    gap: 0.4rem;
+    
+}
+
+
+/*Estilos seção comentários*/
+.commentForm{
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-600);
+}
+.commentForm > strong{
+    line-height: 1.6;
+    color: var(--gray-100);
+}
+.commentForm textarea{
+    width: 100%;
+    background: var(--gray-900);
+    border: 0;
+    resize: none;
+    height: 6rem;
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--gray-100);
+    line-height: 1.4;
+    margin-top: 1rem;
+}
+
+.commentForm button{
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 0;
+    background: var(--green-500);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.1s;
+}
+
+.commentForm button:disabled{
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/*Se o botão nao estiver desabilitado, aplica-se o hover*/
+.commentForm button:not(:disabled):hover{
+    background: var(--green-300);
+}
+
+
+/*Se o textarea nao estivar com foco, o footer que contém o botão nao vai aparecer*/
+.commentForm footer{
+    visibility: hidden;
+    max-height: 0;
+}
+
+/*focus-within é acionado caso qualquer elemento clicavel dentro do form esteja em focus*/
+.commentForm:focus-within footer{
+    visibility: visible;
+    max-height: none;
+}
+
+/*O focus foi editado no global.css*/
+
+.commentList{
+    margin-top: 2rem;
+}
+
+/*Fim Estilos seção comentários*/
+
+
+@media (max-width: 768px){
+    .hashtags{
+        flex-direction: column;
+    }
+}
